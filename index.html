@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grandma m-0 p-0 box-border">
+        <form id="productForm" class="flex hidden flex-col iems-center justify-center ">
+            <h1 class="font-bold text-3xl m-3">Product Form</h1>
+
+            <div class="flex m-10 text-lg items-center gap-40">
+                <div class="font-semibold">Title</div>
+                <input class="border border-black rounded p-1" type="text" id="title" name="title" required><br><br>
+            </div>
+            <div class="flex m-10 text-lg items-center gap-40">
+                <div class="font-semibold">Price</div>
+                <input class="border border-black rounded p-2" type="number" id="price" name="price" required><br><br>
+            </div>
+
+            <div class="flex m-10 text-lg items-center gap-40">
+                <div class="font-semibold">Category Id</div>
+                <input class="border border-black rounded p-2" type="number" id="categoryId" name="price" required><br><br>
+            </div>
+
+            <div class="flex m-10 text-lg items-center gap-28">
+                <div class="font-semibold">Description</div>
+                <textarea class="border border-black rounded p-2" id="description" name="description"
+                    required></textarea><br><br>
+            </div>
+
+            <div class="flex m-10 text-lg items-center gap-28">
+                <div class="font-semibold">Image URL:</div>
+                <input class="border border-black rounded p-2" type="url" id="images" name="images"><br><br>
+            </div>
+
+            <div class=" flex items-center justify-center">
+                <button
+                    class="bg-blue-500 text-xl w-24 hover:bg-blue-600 text-white p-2 rounded"
+                    type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="main_container m-0 p-0 box-border flex items-center justify-center">
+            <div id="data" class="my-2">
+                <h1 class="text-4xl font-semibold">List of products</h1>
+                <div class="flex p-3 justify-end">
+                    <button id="create" class="p-2 border bg-red-600 rounded font-semibold text-lg ">Create +</button>
+                </div>
+                <table>
+                    <thead class="border">
+                        <tr class="text-left gap-4">
+                            <th class="mx-5 w-36">Category Id</th>
+                            <th class="p-2">Name</th>
+                            <th class="w-32">Category</th>
+                            <th class="w-24">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="scrip3.js"></script>
+</body>
+
+</html>
